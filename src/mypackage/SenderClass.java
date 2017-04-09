@@ -5,15 +5,23 @@ package mypackage;
  */
 public class SenderClass {
 
-    int t ;
+    private int mSendValue;
 
-    interface Inter{
-        void me(int val);
+
+    /**
+     * Interface has method [sendFunction(int)] that takes the object that needs to be called back as parameter
+     */
+    interface ValueCallback {
+        void sendFunction(int val);
     }
 
-    public void send(Inter in){
-        t = 1000;
-        in.me(t);
+    /**
+     * This method takes in the interface as a parameter to invoke the abstract method
+     * @param in
+     */
+    public void send(ValueCallback in){
+        mSendValue = 1000;
+        in.sendFunction(mSendValue);
     }
 
 }

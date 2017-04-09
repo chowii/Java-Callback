@@ -6,7 +6,7 @@ import mypackage.ReceiverClass;
 public class Main {
 
     public static void main(String[] args){
-        int i = new ReceiverClass().take();
+        int i = new ReceiverClass().receive();
         System.out.println("Your callback is here: " + i);
     }
 
